@@ -1,3 +1,4 @@
+import { envs } from "./config/plugins/env.plugin";
 import { Server } from "./presentation/server";
 
 (async () => {
