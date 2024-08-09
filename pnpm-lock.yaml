@@ -14,10 +14,16 @@ importers:
       env-var:
         specifier: ^7.5.0
         version: 7.5.0
+      nodemailer:
+        specifier: ^6.9.14
+        version: 6.9.14
     devDependencies:
       '@types/node':
         specifier: ^22.1.0
         version: 22.1.0
+      '@types/nodemailer':
+        specifier: ^6.4.15
+        version: 6.4.15
       rimraf:
         specifier: ^6.0.1
         version: 6.0.1
@@ -69,6 +75,9 @@ packages:
 
   '@types/node@22.1.0':
     resolution: {integrity: sha512-AOmuRF0R2/5j1knA3c6G3HOk523Ga+l+ZXltX8SF1+5oqcXijjfTd8fY3XRZqSihEu9XhtQnKYLmkFaoxgsJHw==}
+
+  '@types/nodemailer@6.4.15':
+    resolution: {integrity: sha512-0EBJxawVNjPkng1zm2vopRctuWVCxk34JcIlRuXSf54habUWdz1FB7wHDqOqvDa8Mtpt0Q3LTXQkAs2LNyK5jQ==}
 
   '@types/strip-bom@3.0.0':
     resolution: {integrity: sha512-xevGOReSYGM7g/kUBZzPqCrR/KYAo+F0yiPc85WFTJa0MSLtyFTVTU6cJu/aV4mid7IffDIWqo69THF2o4JiEQ==}
@@ -276,6 +285,10 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  nodemailer@6.9.14:
+    resolution: {integrity: sha512-Dobp/ebDKBvz91sbtRKhcznLThrKxKt97GI2FAlAyy+fk19j73Uz3sBXolVtmcXjaorivqsbbbjDY+Jkt4/bQA==}
+    engines: {node: '>=6.0.0'}
+
   normalize-path@3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
     engines: {node: '>=0.10.0'}
@@ -482,6 +495,10 @@ snapshots:
     dependencies:
       undici-types: 6.13.0
 
+  '@types/nodemailer@6.4.15':
+    dependencies:
+      '@types/node': 22.1.0
+
   '@types/strip-bom@3.0.0': {}
 
   '@types/strip-json-comments@0.0.30': {}
@@ -669,6 +686,8 @@ snapshots:
   minipass@7.1.2: {}
 
   mkdirp@1.0.4: {}
+
+  nodemailer@6.9.14: {}
 
   normalize-path@3.0.0: {}
 
