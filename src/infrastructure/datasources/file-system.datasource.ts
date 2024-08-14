@@ -38,11 +38,13 @@ export class FileSystemDatasource implements LogDatasource {
 
   private getLogsFromFile(logPath: string): LogEntity[] {
     const content = fs.readFileSync(logPath, "utf-8");
-    return content.split("\n").map(LogEntity.fromJson);
+    if (content.trim() === "") return [];
+
+    return content.trim().split("\n").map(LogEntity.fromJson);
   }
 
   async getLogs(severityLevel: LogSeverityLevel): Promise<LogEntity[]> {
-    if (!(severityLevel in LogDatasource)) {
+    if (!(severityLevel in LogSeverityLevel)) {
       throw new Error("Invalid severity level");
     }
 
