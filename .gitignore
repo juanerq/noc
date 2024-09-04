@@ -3,6 +3,8 @@
 
 mongo_data
 postgres_data
+mongo_test
+postgres_test
 
 ### Node ###
 # Logs
