@@ -1,9 +1,6 @@
 import nodemailer from "nodemailer";
-import { envs } from "../../config/plugins/env.plugin";
-import { LogRepository } from "../../domain/repository/log.repository";
-import { LogEntity, LogSeverityLevel } from "../../domain/entities/log.entity";
 
-interface EmailServiceOptions {
+export interface EmailServiceOptions {
   service: string;
   auth: {
     user: string;
@@ -11,7 +8,7 @@ interface EmailServiceOptions {
   };
 }
 
-interface SendMailOptions {
+export interface SendMailOptions {
   to: string | string[];
   subject: string;
   htmlBody: string;
